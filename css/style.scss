@@ -1,14 +1,15 @@
 /* VARIABLES */
 
 $dark-blue: #171E2F;
-$project-white: #F5F5F5;
+$portfolio-white: #F5F5F5;
 
 $batatabit: #D68523;
 $google-clone: #F5F5F5;
 $platzi-video: #A860E0;
 $blog: #96E8C5;
 
-$project-font: 'Montserrat', sans-serif;
+$main-font: 'Montserrat', sans-serif;
+$projects-font: 'Source Sans Pro', sans-serif;
 
 
 
@@ -25,7 +26,7 @@ html {
 }
 body {
     min-width: 32rem;
-    font-family: $project-font;
+    font-family: $main-font;
 }
 
 
@@ -78,7 +79,7 @@ body {
     position: static;
     box-shadow: none;
     background-color: $dark-blue;
-    color: $project-white;
+    color: $portfolio-white;
 
     &__nav {
         width: 100%;
@@ -112,12 +113,12 @@ body {
                 padding: 1rem;
                 display: block;
                 text-decoration: none;
-                color: $project-white;
-                border: 0.1rem solid $project-white;
+                color: $portfolio-white;
+                border: 0.1rem solid $portfolio-white;
                 transition-duration: 300ms;
             }
             a:hover {
-                background-color: $project-white;
+                background-color: $portfolio-white;
                 color: $dark-blue;
             }
         }
@@ -169,9 +170,93 @@ body {
 
 
 
-/* Projects */
+/* PROJECTS */
+
+.projects {
+    z-index: 0;
+    background-color: $dark-blue;
+    color: $portfolio-white;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 3.5rem;
+
+        article {
+            transition: all 380ms;
+            min-width: 25rem;
+            height: 18rem;
+            border-radius: 2.5rem;
+            font-family: $projects-font;
+            opacity: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                display: none;
+            }
+            a {
+                display: none;
+            }
+        }
+        .batata-bit {
+            background-color: $batatabit;
+            .batata-icon {
+                @include icon(7rem, 4.2rem, "../assets/general/icons/batata.svg")
+            }
+        }
+        .google-clone {
+            background-color: $google-clone;
+            color: #535358;
+            .google-icon {
+                @include icon(7rem, 7.2rem, "../assets/general/google-icon.svg")
+            }
+        }
+        .platzi-video {
+            background-color: $platzi-video;
+            .platzi-icon {
+                @include icon(7rem, 7rem, "../assets/general/chico-logo-platzi-video-BW2.png")
+            }
+        }
+        .generic-blog {
+            background-color: $blog;
+            .blog-icon {
+                @include icon(7rem, 7rem, "../assets/general/blog-icon.png")
+            }
+        }
+        article:hover {
+            opacity: 1;
+            transform: scale(1.12);
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
 
+
+        /* TRANSITIONS */
+
+        .batata-bit:hover {
+            background-image: url(../assets/general/img/bitcoinbaby.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition-duration: 550ms;
+        }
+        .batata-bit:hover .batata-icon {
+            transform: scale(0.7);
+            transform: translate(-5rem, -5rem);
+            transition-duration: 550ms;
+        }
+        article:hover h2, article:hover a {
+            display: inline-block;
+        }
+
+        /* TRANSITIONS */
+
+
+        
+    }
+}
 
 
 /* MEDIA QUERIES */
