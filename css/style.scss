@@ -80,34 +80,43 @@ body {
 
     &__nav {
         width: 100%;
+        margin-top: -1rem;
         margin-bottom: 1.5rem;
         font-size: 1.8rem;
         text-align: end;
         label {
             cursor: pointer;
             display: inline-block;
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
         }
         #toggle {
             display: none;
         }
         #toggle:checked + .menu {
-            display: block;
+            visibility: visible;
+            opacity: 1;
         }
         .menu {
-            display: none;
+            opacity: 0;
+            visibility: hidden;
             min-width: 28rem;
             position: absolute;
             left: calc(100% - 30rem);
             text-align: center;
             background-color: $dark-blue;
+            transition-duration: 300ms;
             a {
                 padding: 1rem;
                 display: block;
                 text-decoration: none;
                 color: $project-white;
                 border: 0.1rem solid $project-white;
+                transition-duration: 300ms;
+            }
+            a:hover {
+                background-color: $project-white;
+                color: $dark-blue;
             }
         }
         // .hamburger-icon {
@@ -130,15 +139,22 @@ body {
     }
 }
 
+
+
+/* MEDIA QUERIES */
+
 @media only screen and (min-width: 600px) {
     .header {
         &__nav {
             display: flex;
             justify-content: center;
             #toggle:checked + .menu {
-                display: flex;
+                visibility: visible;
+                opacity: 1;
             }
             .menu {
+                visibility: visible;
+                opacity: 1;
                 position: static;
                 display: flex;
                 justify-content: space-around;
@@ -147,8 +163,8 @@ body {
                 max-width: 80rem;
                 a {
                     display: inline-block;
-                    padding: 0;
                     border: none;
+                    border-radius: 0.5rem;
                 }
             }
             label {
