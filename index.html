@@ -18,29 +18,52 @@
             <label for="toggle">&#9776;</label>
             <input type="checkbox" id="toggle"/>
             <div class="menu">
-                <a href="#">About me</a>
-                <a href="#">Projects</a>
-                <a href="#">Illustrations</a>
-                <a href="#">Contact</a>
+                <a href="#about-me">About me</a>
+                <a href="#projects">Projects</a>
+                <a href="#illustrations">Illustrations</a>
+                <a href="#contact">Contact</a>
             </div>
             <!-- <span class="hamburger-icon"></span> -->
         </nav>
-        <div class="header__image-container container">
+        <div class="header__image-container center-text">
             <img src="./assets/self-portrait-mobile.png" alt="Joel's caricature self-portrait">
         </div>
-        <div class="header__text-container container">
+        <div class="header__text-container center-text">
             <h1 class="section-heading">CSS & HTML, Design and Illustration</h1>
             <p>My goal is to create products that look good both on screen and paper.</p>
         </div>
     </header>
 
     <main>
-        <section class="section probando">
+        <section class="section about-me" id="about-me">
             <div class="section-decoration"></div>
+            <div class="center-text">
+                <h1 class="about-me__heading-container section-heading">
+                    Hello!
+                    <br/>
+                    My name is Joel
+                </h1>
+            </div>
+            <div class="about-me__image-container center-text">
+                <img src="./assets/full-body-small.png" alt="Joel's caricature full-body drawing">
+            </div>
+            <div class="about-me__text-container center-text">
+                <p>I design and code web pages using HTML5 and CSS3. I'm also an illustrator</p>
+                <p>I love drawing and eating, so I spend most of my time and energy doing these activities.</p>
+                <p>I'm constantly working to get better in whatever I'm doing, always trying to find the most logical way of solving problems.</p>
+            </div>
         </section>
+        <!-- <section class="section projects" id="projects">
+            <div class="section-decoration"></div>
+            
+        </section>
+        <section class="section illustrations" id="illustrations">
+            <div class="section-decoration"></div>
+            
+        </section> -->
     </main>
 
-    <footer>
+    <footer class="contact section" id="contact">
 
     </footer>
 

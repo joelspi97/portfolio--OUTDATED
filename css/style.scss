@@ -21,6 +21,7 @@ $project-font: 'Montserrat', sans-serif;
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body {
     min-width: 32rem;
@@ -34,7 +35,7 @@ body {
 .section {
     position: relative;
     width: 100%;
-    padding: 4rem 2rem;
+    padding: 9rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +47,7 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
 }
-.container {
+.center-text {
     text-align: center;
 }
 .section-decoration {
@@ -73,6 +74,7 @@ body {
 /* HEADER */
 
 .header {
+    padding-top: 4rem;
     position: static;
     box-shadow: none;
     background-color: $dark-blue;
@@ -138,6 +140,37 @@ body {
         }
     }
 }
+
+
+
+/* ABOUT ME */
+
+.about-me {
+    &__heading-container {
+        margin-bottom: 2.5rem;
+    }
+
+    &__image-container {
+        margin-bottom: 2.5rem;
+        img {
+            width: 51.5%;
+        }
+    }
+    &__text-container {
+        p {
+            font-size: 1.6rem;
+            margin-top: 2.5rem;
+        } 
+    }
+    &__text-container :first-child {
+        font-weight: 600;
+    }
+}
+
+
+
+/* Projects */
+
 
 
 
