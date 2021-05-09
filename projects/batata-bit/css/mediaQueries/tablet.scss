@@ -1,0 +1,61 @@
+/* CURRENCIES SECTION */
+
+.currencies {
+    &-tables-section {
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+    &-tables__container {
+        max-width: 24rem;
+    }
+    .right-arrow-icon, .left-arrow-icon {
+        display: none;
+    }
+}
+
+
+/* DESCRIPTION SECTION */
+
+.description {
+    &__articles-container {
+        max-width: 90rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* HERO IMAGE SECTION */
+
+.hero-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/img/bitcoinbaby3x.png");
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+
+/* PLANS SECTION */
+
+.plans-slider__card:hover {
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+
+footer {
+    .footer__links-container {
+        width: 50%;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            a {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

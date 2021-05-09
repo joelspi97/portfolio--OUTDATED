@@ -1,0 +1,22 @@
+/* ESCONDE LAS FLECHAS DEL SLIDER DE TABLAS */
+
+.currencies-tables {
+    justify-content: space-around;
+    overflow: hidden;
+    .currencies-tables__container {
+        margin: 0;
+    }
+    .right-arrow-icon, .left-arrow-icon {
+        display: none;
+    }
+}
+
+
+/* HERO IMAGE SECTION */
+
+.hero-image-container {
+    background-image: url("../../assets/img/bitcoinbaby2x.jpg");
+    h1 {
+        font-size: 3rem;
+    }
+}

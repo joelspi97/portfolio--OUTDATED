@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,kBAAkB,AAAC,CACf,eAAe,CAAE,YAAY,CAC7B,QAAQ,CAAE,MAAM,CAOnB,AATD,AAGI,kBAHc,CAGd,6BAA6B,AAAC,CAC1B,MAAM,CAAE,CAAC,CACZ,AALL,AAMI,kBANc,CAMd,iBAAiB,CANrB,kBAAkB,CAMK,gBAAgB,AAAC,CAChC,OAAO,CAAE,IAAI,CAChB,AAML,AAAA,qBAAqB,AAAC,CAClB,gBAAgB,CAAE,yCAAyC,CAI9D,AALD,AAEI,qBAFiB,CAEjB,EAAE,AAAC,CACC,SAAS,CAAE,IAAI,CAClB",
+    "sources": [
+        "minorQueries.scss"
+    ],
+    "names": [],
+    "file": "minorQueries.css"
+}
