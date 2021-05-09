@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página hecha para practicar maquetación" />
+    <meta name="robots" content="index,follow" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mediaqueries.css">
+    <link rel="stylesheet" href="./css/font/flaticon.css">
+</head>
+
+<body class="home-body">
+    <header>
+        <img src="./assets/logo-platzi-video-BW2.png" alt="Logo de Platzi">
+        <nav class="nav">
+            <div class="nav__menu-container">
+                <img src="./assets/user-icon.png" alt="Ícono de usuario">
+                <span>Perfil</span>
+            </div>
+            <ul class="nav__list">
+                <li>
+                    <span class="fimanager flaticon-settings"></span>
+                    <a href="./login.html">Ver página de ejemplo de login</a>
+                </li>
+                <li>
+                    <span class="fimanager flaticon-settings"></span>
+                    <a href="./signup.html">Ver página de ejemplo de signup</a>
+                </li>
+                <li>
+                    <span class="fimanager flaticon-logout"></span>
+                    <a href="./error.html">Ver página de ejemplo de error 404</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="home-main">
+        <section class="search">
+            <h1 class="search__title">¿Qué quieres ver hoy?</h1>
+            <label class="search__input-container" for="buscar">
+                <input type="text" placeholder="Buscar..." id="buscar">
+                <span class="flaticon-magnifying-glass search-icon"></span>
+            </label>
+        </section>
+        <section class="carousel-section">
+            <h3>Mi lista</h3>
+            <div class="carousel">
+                <div class="carousel__container">
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/2421586/pexels-photo-2421586.jpeg?cs=srgb&dl=pexels-alfie-thompson-2421586.jpg&fm=jpg"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/3990420/pexels-photo-3990420.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?cs=srgb&dl=pexels-suvan-chowdhury-144428.jpg&fm=jpg"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/4046265/pexels-photo-4046265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/1749140/pexels-photo-1749140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="carousel-section">
+            <h3>Tendencias</h3>
+            <div class="carousel">
+                <div class="carousel__container">
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/2421586/pexels-photo-2421586.jpeg?cs=srgb&dl=pexels-alfie-thompson-2421586.jpg&fm=jpg"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/3990420/pexels-photo-3990420.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?cs=srgb&dl=pexels-suvan-chowdhury-144428.jpg&fm=jpg"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/4046265/pexels-photo-4046265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/1749140/pexels-photo-1749140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="carousel-section">
+            <h3>Originales de PlatziVideo</h3>
+            <div class="carousel">
+                <div class="carousel__container">
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/2421586/pexels-photo-2421586.jpeg?cs=srgb&dl=pexels-alfie-thompson-2421586.jpg&fm=jpg"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/3990420/pexels-photo-3990420.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?cs=srgb&dl=pexels-suvan-chowdhury-144428.jpg&fm=jpg"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/4046265/pexels-photo-4046265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="carousel-item">
+                        <a href="#">
+                            <img class="carousel-item__img"
+                                src="https://images.pexels.com/photos/1749140/pexels-photo-1749140.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                alt="Thumbnail del video">
+                            <div class="carousel-item__details">
+                                <div>
+                                    <a href="#play">
+                                        <img class="carousel-item__icon" src="./assets/icons8-play-64.png"
+                                            alt="Play Icon">
+                                    </a>
+                                    <a href="#plus">
+                                        <img class="carousel-item__icon" src="./assets/icons8-plus-64.png"
+                                            alt="Plus icon">
+                                    </a>
+                                </div>
+                                <p class="carousel-item__title">Título descriptivo</p>
+                                <p class="carousel-item__subtitle">2019 / 16+ / 114 minutos</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="home-footer">
+        <a href="#">Términos de uso</a>
+        <a href="#">Declaración de privacidad</a>
+        <a href="#">Centro de ayuda</a>
+        <a href="https://www.pexels.com/">Imágenes tomadas de pexels.com</a>
+    </footer>
+</body>
+
+</html>
