@@ -84,6 +84,19 @@ body {
         margin-right: -0.3rem;
         margin-bottom: -0.3rem;
 }
+@mixin project-hover ($url, $transition-duration) {
+    background-image: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-duration: $transition-duration;
+}
+@mixin project-icon-hover ($width, $height, $x, $y, $transition-duration) {
+    width: $width;
+    height: $height;
+    transform: translate($x, $y);
+    transition: all $transition-duration;
+}
 
 
 /* HEADER */
@@ -136,9 +149,6 @@ body {
                 color: $dark-blue;
             }
         }
-        // .hamburger-icon {
-        //     @include icon (2rem, 2rem, "../assets/general/hamburger-icon.png");
-        // }
     }
 
     &__image-container {
@@ -217,7 +227,7 @@ body {
         .batata-bit {
             background-color: $batatabit;
             h2 {
-                margin-right: -2.5rem;
+                margin-right: -3rem;
             }
             .batata-icon {
                 @include icon(7rem, 4.2rem, "../assets/general/icons/batata.svg");
@@ -228,6 +238,9 @@ body {
         }
         .platzi-video {
             background-color: $platzi-video;
+            h2 {
+                margin-right: -4.1rem;
+            }
             .platzi-icon {
                 @include icon(7rem, 7rem, "../assets/general/chico-logo-platzi-video-BW2.png");
             }
@@ -242,7 +255,8 @@ body {
             }
             .blog-icon {
                 @include icon(7rem, 7rem, "../assets/general/blog-icon.png");
-                border-radius: 2.5rem;
+                background-color: $portfolio-white;
+                border-radius: 3.5rem;
             }
             a {
                 @include project-button ($portfolio-white, $dark-blue);
@@ -272,42 +286,44 @@ body {
             display: inline-block;
         }
 
-
         .batata-bit:hover {
-            background-image: url(../assets/general/img/bitcoinbaby.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            transition-duration: 550ms;
+            @include project-hover ("../assets/general/img/bitcoinwoman.jpg", 550ms);
+            .batata-icon {
+                @include project-icon-hover (13%, 11.8%, -6.7rem, -6.5rem, 600ms);
+            }
         }
-        .batata-bit:hover .batata-icon {
-            width: 13%;
-            height: 11.8%;
-            transform: translate(-6.7rem, -6.5rem);
-            transition: all 600ms;
+
+        
+        .platzi-video:hover {
+            @include project-hover ("https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?cs=srgb&dl=pexels-suvan-chowdhury-144428.jpg&fm=jpg", 550ms);
+            .platzi-icon {
+                @include project-icon-hover (12%, 20%, -7.1rem, -6.5rem, 600ms);
+            }
         }
 
 
         .generic-blog:hover {
+            @include project-hover ("../projects/blog/assets/img/cover_909cd27f-8eb3-4e9a-9cae-c5549009f6b5.png", 550ms);
+            .blog-icon {
+                @include project-icon-hover (13%, 20%, -7.7rem, -6.5rem, 700ms);
+            }
+        }
+
+
+        .google-clone:hover {
             background-image: url(../projects/blog/assets/img/cover_909cd27f-8eb3-4e9a-9cae-c5549009f6b5.png);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             transition-duration: 550ms;
         }
-        .generic-blog:hover .blog-icon {
+        .google-clone:hover .google-icon {
             background-color: $portfolio-white;
             width: 13%;
             height: 20%;
             transform: translate(-7.7rem, -6.5rem);
-            transition: all 600ms;
+            transition: all 700ms;
         }
-
-
-        /* TRANSITIONS */
-
-
-        
     }
 }
 
