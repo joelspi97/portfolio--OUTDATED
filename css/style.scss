@@ -69,7 +69,21 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-
+@mixin project-button ($bg-color, $color) {
+    display: none;
+    background-color: $bg-color;
+    color: $color;
+    font-size: 1.4rem;
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2.5rem;
+}
+.arrow-icon {
+    @include icon(2rem, 1.6rem, "../assets/general/icons/orange-right-arrow.svg");
+        margin-right: -0.3rem;
+        margin-bottom: -0.3rem;
+}
 
 
 /* HEADER */
@@ -186,6 +200,8 @@ body {
             transition: all 380ms;
             min-width: 25rem;
             height: 18rem;
+            padding-top: 0.7rem;
+            padding-bottom: 1.1rem;
             border-radius: 2.5rem;
             font-family: $projects-font;
             opacity: 0.8;
@@ -194,15 +210,19 @@ body {
             align-items: center;
             h2 {
                 display: none;
-            }
-            a {
-                display: none;
+                font-size: 2.8rem;
             }
         }
         .batata-bit {
             background-color: $batatabit;
+            h2 {
+                margin-right: -2.5rem;
+            }
             .batata-icon {
                 @include icon(7rem, 4.2rem, "../assets/general/icons/batata.svg")
+            }
+            a {
+                @include project-button ($portfolio-white, $dark-blue);
             }
         }
         .google-clone {
@@ -211,17 +231,26 @@ body {
             .google-icon {
                 @include icon(7rem, 7.2rem, "../assets/general/google-icon.svg")
             }
+            a {
+                @include project-button (white, $dark-blue);
+            }
         }
         .platzi-video {
             background-color: $platzi-video;
             .platzi-icon {
                 @include icon(7rem, 7rem, "../assets/general/chico-logo-platzi-video-BW2.png")
             }
+            a {
+                @include project-button ($portfolio-white, $dark-blue);
+            }
         }
         .generic-blog {
             background-color: $blog;
             .blog-icon {
                 @include icon(7rem, 7rem, "../assets/general/blog-icon.png")
+            }
+            a {
+                @include project-button ($dark-blue, $portfolio-white);
             }
         }
         article:hover {
@@ -231,6 +260,7 @@ body {
             justify-content: space-between;
         }
 
+        /* Seguro voy a tener que ir cambiando entre secciones posicionadas y sin posicionar */
 
 
         /* TRANSITIONS */
@@ -243,9 +273,10 @@ body {
             transition-duration: 550ms;
         }
         .batata-bit:hover .batata-icon {
-            transform: scale(0.7);
-            transform: translate(-5rem, -5rem);
-            transition-duration: 550ms;
+            width: 13%;
+            height: 11.8%;
+            transform: translate(-6.7rem, -6.5rem);
+            transition: all 600ms;
         }
         article:hover h2, article:hover a {
             display: inline-block;
