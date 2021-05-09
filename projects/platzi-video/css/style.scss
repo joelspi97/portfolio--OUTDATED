@@ -59,7 +59,7 @@ footer {
     padding: 0 3rem;
     width: 100%;
         a {
-            margin-right: 3rem;        
+            margin: 0 1.5rem;        
         }
 }
 
@@ -226,6 +226,7 @@ footer {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             align-items: center;
+            justify-items: center;
             background-color: inherit;
         }
 }
