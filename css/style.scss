@@ -3,7 +3,7 @@
 $dark-blue: #171E2F;
 $portfolio-white: #F5F5F5;
 
-$batatabit: #D68523;
+$batatabit: #e68f24;
 $google-clone: #F5F5F5;
 $platzi-video: #A860E0;
 $blog: #96E8C5;
@@ -275,7 +275,6 @@ body {
             }
         }
 
-
         /* TRANSITIONS */
 
         article:hover {
@@ -320,6 +319,44 @@ body {
         }
     }
 }
+
+
+
+/* CONTACT */
+
+.contact {
+    background-color: $portfolio-white;
+    color: $dark-blue;
+
+    &__links-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            border-radius: 5rem;
+            height: 8rem;
+            text-decoration: none;
+            transition: background-color 200ms;
+            .linkedin-icon {
+                @include icon(8rem, 8rem, "../assets/general/linkedin_icon-large.png");
+            }
+            .github-icon {
+                @include icon(8rem, 8rem, "../assets/general/github_icon-large.png");
+            }
+            .mail-icon {
+                @include icon(8rem, 8rem, "../assets/general/mail_icon-large.png");
+            }
+        }
+        a:hover {
+            background-color: rgb(255, 254, 199);
+        }
+    }
+    p {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
+
 
 
 /* MEDIA QUERIES */
