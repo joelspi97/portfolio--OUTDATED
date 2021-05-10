@@ -69,10 +69,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-@mixin project-button ($bg-color, $color) {
+.project-button {
     display: none;
-    background-color: $bg-color;
-    color: $color;
+    background-color: $portfolio-white;
+    color: $dark-blue;
+    border: 0.1rem solid $dark-blue;
     font-size: 1.4rem;
     padding: 0.6rem 0.8rem;
     text-align: center;
@@ -80,7 +81,7 @@ body {
     border-radius: 2.5rem;
 }
 .arrow-icon {
-    @include icon(2rem, 1.6rem, "../assets/general/icons/orange-right-arrow.svg");
+    @include icon(2rem, 1.6rem, "../assets/general/icons/right-arrow.svg");
         margin-right: -0.3rem;
         margin-bottom: -0.3rem;
 }
@@ -228,48 +229,43 @@ body {
             background-color: $batatabit;
             h2 {
                 margin-right: -3rem;
+                user-select: none;
             }
             .batata-icon {
                 @include icon(7rem, 4.2rem, "../assets/general/icons/batata.svg");
-            }
-            a {
-                @include project-button ($portfolio-white, $dark-blue);
             }
         }
         .platzi-video {
             background-color: $platzi-video;
             h2 {
                 margin-right: -4.1rem;
+                user-select: none;
             }
             .platzi-icon {
                 @include icon(7rem, 7rem, "../assets/general/chico-logo-platzi-video-BW2.png");
-            }
-            a {
-                @include project-button ($portfolio-white, $dark-blue);
             }
         }
         .generic-blog {
             background-color: $blog;
             h2 {
                 margin-right: -4.5rem;
+                user-select: none;
             }
             .blog-icon {
                 @include icon(7rem, 7rem, "../assets/general/blog-icon.png");
                 background-color: $portfolio-white;
                 border-radius: 3.5rem;
             }
-            a {
-                @include project-button ($portfolio-white, $dark-blue);
-            }
         }
         .google-clone {
             background-color: $google-clone;
             color: #535358;
+            h2 {
+                margin-right: -4.1rem;
+                user-select: none;
+            }
             .google-icon {
                 @include icon(7rem, 7.2rem, "../assets/general/google-icon.svg");
-            }
-            a {
-                @include project-button (white, $dark-blue);
             }
         }
 
@@ -287,7 +283,7 @@ body {
         }
 
         .batata-bit:hover {
-            @include project-hover ("../assets/general/img/bitcoinwoman.jpg", 550ms);
+            @include project-hover ("../projects/batata-bit/assets/img/bitcoin-woman-min.jpg", 550ms);
             .batata-icon {
                 @include project-icon-hover (13%, 11.8%, -6.7rem, -6.5rem, 600ms);
             }
@@ -295,15 +291,15 @@ body {
 
         
         .platzi-video:hover {
-            @include project-hover ("https://images.pexels.com/photos/144428/pexels-photo-144428.jpeg?cs=srgb&dl=pexels-suvan-chowdhury-144428.jpg&fm=jpg", 550ms);
+            @include project-hover ("../projects/platzi-video/assets/platzi-thumbnail.jpg", 550ms);
             .platzi-icon {
-                @include project-icon-hover (12%, 20%, -7.1rem, -6.5rem, 600ms);
+                @include project-icon-hover (12%, 20%, -7.1rem, -6.5rem, 650ms);
             }
         }
 
 
         .generic-blog:hover {
-            @include project-hover ("../projects/blog/assets/img/cover_909cd27f-8eb3-4e9a-9cae-c5549009f6b5.png", 550ms);
+            @include project-hover ("../projects/blog/assets/img/blog-cover.jpg", 550ms);
             .blog-icon {
                 @include project-icon-hover (13%, 20%, -7.7rem, -6.5rem, 700ms);
             }
@@ -311,18 +307,10 @@ body {
 
 
         .google-clone:hover {
-            background-image: url(../projects/blog/assets/img/cover_909cd27f-8eb3-4e9a-9cae-c5549009f6b5.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            transition-duration: 550ms;
-        }
-        .google-clone:hover .google-icon {
-            background-color: $portfolio-white;
-            width: 13%;
-            height: 20%;
-            transform: translate(-7.7rem, -6.5rem);
-            transition: all 700ms;
+            @include project-hover ("../projects/google-clone/assets/google-thumbnail.jpg", 550ms);
+            .google-icon {
+                @include project-icon-hover (10%, 16.6%, -7.7rem, -6.5rem, 600ms);
+            }
         }
     }
 }
