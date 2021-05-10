@@ -42,7 +42,6 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0rem 1rem 0.5rem 0rem rgba(0, 0, 0, 0.25) inset;
-    z-index: -1;
 }
 .section-heading {
     font-size: 2.8rem;
@@ -103,8 +102,8 @@ body {
 /* HEADER */
 
 .header {
+    z-index: 3;
     padding-top: 4rem;
-    position: static;
     box-shadow: none;
     background-color: $dark-blue;
     color: $portfolio-white;
@@ -172,6 +171,9 @@ body {
 /* ABOUT ME */
 
 .about-me {
+    z-index: 2;
+    background-color: $portfolio-white;
+
     &__heading-container {
         margin-bottom: 2.5rem;
     }
@@ -198,9 +200,13 @@ body {
 /* PROJECTS */
 
 .projects {
-    z-index: 0;
+    z-index: 1;
     background-color: $dark-blue;
     color: $portfolio-white;
+
+    .section-decoration {
+        background-color: $portfolio-white;
+    }
 
     &__container {
         display: grid;
@@ -309,7 +315,7 @@ body {
         .google-clone:hover {
             @include project-hover ("../projects/google-clone/assets/google-thumbnail.jpg", 550ms);
             .google-icon {
-                @include project-icon-hover (10%, 16.6%, -7.7rem, -6.5rem, 600ms);
+                @include project-icon-hover (10%, 16%, -7.7rem, -6.5rem, 600ms);
             }
         }
     }
