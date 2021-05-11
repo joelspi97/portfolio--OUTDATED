@@ -47,7 +47,7 @@ body {
     font-size: 2.8rem;
     font-weight: 700;
 }
-.center-text {
+.center-content {
     text-align: center;
 }
 .section-decoration {
@@ -154,6 +154,7 @@ body {
     &__image-container {
         margin-bottom: 2.5rem;
         img {
+            border-radius: 25rem;
             width: 75%;
         }
     }
@@ -208,14 +209,14 @@ body {
         background-color: $portfolio-white;
     }
 
-    &__container {
+    &__grid-container {
         display: grid;
         grid-template-columns: 1fr;
         padding-top: 3.5rem;
 
         article {
             transition: all 380ms;
-            min-width: 25rem;
+            width: 25rem;
             height: 18rem;
             padding-top: 0.7rem;
             padding-bottom: 1.1rem;
@@ -266,6 +267,7 @@ body {
         .google-clone {
             background-color: $google-clone;
             color: #535358;
+            margin: 0;
             h2 {
                 margin-right: -4.1rem;
                 user-select: none;
@@ -327,9 +329,25 @@ body {
 .contact {
     background-color: $portfolio-white;
     color: $dark-blue;
+    padding-bottom: 4rem;
+
+    h1 {
+        margin-bottom: 2.5rem;
+    }
+
+    &__image-container {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        img {
+            border-radius: 25rem;
+            width: 75%;
+            max-width: 30rem;
+        }
+    }
 
     &__links-container {
         width: 100%;
+        margin-bottom: 6rem;
         display: flex;
         justify-content: space-evenly;
         a {
@@ -361,7 +379,10 @@ body {
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
+
+    /* HEADER TABLET */
+
     .header {
         &__nav {
             display: flex;
@@ -387,6 +408,21 @@ body {
             }
             label {
                 display: none;
+            }
+        }
+    }
+
+
+
+    /* PROJECTS TABLET*/
+
+    .projects {
+        
+        &__grid-container {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 3.5rem;
+            .generic-blog {
+                margin: 0;
             }
         }
     }
