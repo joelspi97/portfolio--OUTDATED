@@ -110,6 +110,7 @@ body {
 
     &__nav {
         width: 100%;
+        max-width: 120rem;
         margin-top: -1rem;
         margin-bottom: 1.5rem;
         font-size: 1.8rem;
@@ -211,7 +212,9 @@ body {
 
     &__grid-container {
         display: grid;
+        justify-items: center;
         grid-template-columns: 1fr;
+        grid-row-gap: 3.5rem;
         padding-top: 3.5rem;
 
         article {
@@ -220,7 +223,6 @@ body {
             height: 18rem;
             padding-top: 0.7rem;
             padding-bottom: 1.1rem;
-            margin-bottom: 3.5rem;
             border-radius: 2.5rem;
             font-family: $projects-font;
             opacity: 0.8;
@@ -267,7 +269,6 @@ body {
         .google-clone {
             background-color: $google-clone;
             color: #535358;
-            margin: 0;
             h2 {
                 margin-right: -4.1rem;
                 user-select: none;
@@ -316,7 +317,7 @@ body {
         .google-clone:hover {
             @include project-hover ("../projects/google-clone/assets/google-thumbnail.jpg", 550ms);
             .google-icon {
-                @include project-icon-hover (10%, 16%, -7.7rem, -6.5rem, 600ms);
+                @include project-icon-hover (10%, 16.6%, -7.7rem, -6.5rem, 600ms);
             }
         }
     }
@@ -377,11 +378,11 @@ body {
 
 
 
-/* MEDIA QUERIES */
+/* TABLET MEDIA QUERIES */
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
 
-    /* HEADER TABLET */
+    /* HEADER - TABLET */
 
     .header {
         &__nav {
@@ -412,17 +413,104 @@ body {
         }
     }
 
-
-
-    /* PROJECTS TABLET*/
+    /* PROJECTS - TABLET */
 
     .projects {
-        
         &__grid-container {
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 3.5rem;
-            .generic-blog {
-                margin: 0;
+        }
+    }
+}
+
+
+
+/* DESKTOP MEDIA QUERIES */
+
+@media only screen and (min-width: 900px) {
+
+    /* HEADER - DESKTOP */
+
+    .header {
+        &__nav {
+            justify-content: flex-end;
+            .menu {
+                justify-content: flex-end;
+                a {
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+
+    /* PROJECTS - DESKTOP */
+    .projects {
+        &__grid-container {
+            width: auto;
+            grid-gap: 5rem;
+            article {
+                width: 30rem;
+                height: 21rem;
+            }
+
+            /* TRANSITIONS */
+
+            .batata-bit:hover {
+                .batata-icon {
+                    transform: translate(-7rem, -7.8rem);
+                }
+            }
+            .platzi-video:hover {
+                .platzi-icon {
+                    transform: translate(-7.1rem, -7.8rem);
+                }
+            }
+            .generic-blog:hover {
+                .blog-icon {
+                    transform: translate(-8rem, -7.8rem);
+                }
+            }
+            .google-clone:hover {
+                .google-icon {
+                    transform: translate(-8.1rem, -7.8rem);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .projects {
+        &__grid-container {
+            grid-gap: 6rem;
+            article {
+                width: 35rem;
+                height: 23rem;
+            }
+
+            /* TRANSITIONS */
+
+            .batata-bit:hover {
+                .batata-icon {
+                    transform: translate(-7.6rem, -8.8rem);
+                    height: 12.8%;
+                }
+            }
+            .platzi-video:hover {
+                .platzi-icon {
+                    transform: translate(-7.6rem, -8.8rem);
+                }
+            }
+            .generic-blog:hover {
+                .blog-icon {
+                    transform: translate(-8.6rem, -8.8rem);
+                    height: 22%;
+                }
+            }
+            .google-clone:hover {
+                .google-icon {
+                    transform: translate(-8.6rem, -8.8rem);
+                }
             }
         }
     }
