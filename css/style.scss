@@ -341,13 +341,16 @@ body {
         margin-bottom: 2.5rem;
         img {
             border-radius: 25rem;
-            width: 75%;
+            width: 40%;
+            min-width: 21rem;
             max-width: 30rem;
         }
     }
 
     &__links-container {
-        width: 100%;
+        width: 80%;
+        min-width: 28rem;
+        max-width: 70rem;
         margin-bottom: 6rem;
         display: flex;
         justify-content: space-evenly;
@@ -373,6 +376,7 @@ body {
     p {
         font-size: 1.4rem;
         font-weight: 600;
+        margin-bottom: 3rem;
     }
 }
 
