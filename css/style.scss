@@ -89,7 +89,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition-duration: $transition-duration;
+    transition: all $transition-duration;
 }
 @mixin project-icon-hover ($width, $height, $x, $y, $transition-duration) {
     width: $width;
@@ -115,12 +115,65 @@ body {
         margin-bottom: 1.5rem;
         font-size: 1.8rem;
         text-align: end;
+
         label {
             cursor: pointer;
+            -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
             display: inline-block;
             font-size: 2.2rem;
             margin-bottom: 1rem;
+
+            /* HAMBURGER MENU */
+            
+            .menu-btn {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+                transition: all 300ms ease-in-out;
+
+                &__burger {
+                    width: 2rem;
+                    height: 0.2rem;
+                    background-color: white;
+                    border-radius: 0.2rem;
+                    transition: all 300ms ease-in-out;
+                }
+                .menu-btn__burger::before, .menu-btn__burger::after {
+                    content: "";
+                    position: absolute;
+                    width: 2rem;
+                    height: 0.2rem;
+                    background-color: white;
+                    border-radius: 0.5rem;
+                    transition: all 300ms ease-in-out;
+                }
+                .menu-btn__burger::before {
+                    transform: translate(-2rem, -0.65rem); 
+                }
+                .menu-btn__burger::after {
+                    transform: translate(-2rem, 0.65rem);  
+                }
+            }
+
+            /* HAMBURGER ANIMATION */
+
+            .menu-btn.open {
+                .menu-btn__burger {
+                    background-color: transparent;
+                }
+                .menu-btn__burger::before {
+                    transform: translateX(-2rem) rotate(45deg);
+                }
+                .menu-btn__burger::after {
+                    transform: translateX(-2rem) rotate(-45deg);
+                }
+            }
         }
+        
         #toggle {
             display: none;
         }
@@ -519,3 +572,5 @@ body {
         }
     }
 }
+
+
