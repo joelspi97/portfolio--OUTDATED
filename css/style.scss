@@ -243,6 +243,7 @@ body {
         p {
             font-size: 1.6rem;
             margin-top: 2.5rem;
+            max-width: 70rem;
         } 
     }
     &__text-container :first-child {
@@ -470,6 +471,18 @@ body {
         }
     }
 
+
+    /* ABOUT-ME - TABLET*/
+
+    .about-me {
+        &__image-container {
+            img {
+                width: 16rem;
+            }
+        }    
+    }
+
+
     /* PROJECTS - TABLET */
 
     .projects {
@@ -500,7 +513,20 @@ body {
         }
     }
 
+
+    /* ABOUT-ME - DESKTOP */
+
+    .about-me {
+        &__image-container {
+            img {
+                width: 17.5rem;
+            }
+        }    
+    }
+
+
     /* PROJECTS - DESKTOP */
+
     .projects {
         &__grid-container {
             width: auto;
@@ -537,6 +563,20 @@ body {
 }
 
 @media only screen and (min-width: 1100px) {
+
+    /* ABOUT-ME - DESKTOP__LARGE */
+
+    .about-me {
+        &__image-container {
+            img {
+                width: 19.5rem;
+            }
+        }    
+    }
+
+
+    /* PROJECTS - DESKTOP__LARGE */
+
     .projects {
         &__grid-container {
             grid-gap: 6rem;
