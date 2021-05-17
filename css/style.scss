@@ -226,12 +226,14 @@ body {
 
 .about-me {
     z-index: 2;
-    background-color: $portfolio-white;
+    background-color: transparent;
 
     &__animation {
+        position: absolute;
+        z-index: -1;
+        background-color: $portfolio-white;
         width: 100%;
         height: 100%;
-        position: absolute;
         div {
             position: absolute;
             width: 6rem;
@@ -241,9 +243,9 @@ body {
             border-radius: 25rem;
         }
         div:nth-child(1) {
-            top: 40%;
+            top: 32%;
             left: 12%;
-            animation: bubbles 10s linear infinite;
+            animation: bubbles 9s linear infinite;
         }
         div:nth-child(2) {
             top: 57%;
@@ -251,34 +253,30 @@ body {
             animation: bubbles 7s linear infinite;
         }
         div:nth-child(3) {
-            top: 32%;
-            left: 6%;
+            top: 57%;
+            left: 16%;
             animation: bubbles 6s linear infinite;
         }
         div:nth-child(4) {
-            top: 40%;
-            left: 77%;
-            animation: bubbles 6s linear infinite;
-        }
-        div:nth-child(5) {
-            top: 57%;
-            left: 10%;
-            animation: bubbles 6s linear infinite;
-        }
-        div:nth-child(6) {
             top: 56%;
             left: 78%;
             animation: bubbles 11s linear infinite;
         }
-        div:nth-child(7) {
+        div:nth-child(5) {
             top: 55%;
             left: 25%;
             animation: bubbles 9s linear infinite;
         }
-        div:nth-child(8) {
+        div:nth-child(6) {
             top: 32%;
             left: 75%;
             animation: bubbles 5s linear infinite;
+        }
+        div:nth-child(7) {
+            display: none;
+        }
+        div:nth-child(8) {
+            display: none;
         }
         div:nth-child(9) {
             display: none;
@@ -549,6 +547,21 @@ body {
     /* ABOUT-ME - TABLET*/
 
     .about-me {
+        &__animation {
+            div:nth-child(7) {
+                display: block;
+                top: 40%;
+                left: 62%;
+                animation: bubbles 6s linear infinite;
+            }
+            div:nth-child(8) {
+                display: block;
+                top: 32%;
+                left: 21%;
+                animation: bubbles 6s linear infinite;
+            }
+        }
+            
         &__image-container {
             img {
                 width: 16rem;
