@@ -84,12 +84,11 @@ body {
         margin-right: -0.3rem;
         margin-bottom: -0.3rem;
 }
-@mixin project-hover ($url, $transition-duration) {
+@mixin project-hover ($url) {
     background-image: url($url);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all $transition-duration;
 }
 @mixin project-icon-hover ($width, $height, $x, $y, $transition-duration) {
     width: $width;
@@ -229,8 +228,6 @@ body {
     z-index: 2;
     background-color: $portfolio-white;
 
-    /* BACKGROUND ANIMATION */
-
     &__animation {
         width: 100%;
         height: 100%;
@@ -246,42 +243,42 @@ body {
         div:nth-child(1) {
             top: 40%;
             left: 12%;
-            animation: animate 10s linear infinite;
+            animation: bubbles 10s linear infinite;
         }
         div:nth-child(2) {
             top: 57%;
             left: 70%;
-            animation: animate 7s linear infinite;
+            animation: bubbles 7s linear infinite;
         }
         div:nth-child(3) {
             top: 32%;
             left: 6%;
-            animation: animate 6s linear infinite;
+            animation: bubbles 6s linear infinite;
         }
         div:nth-child(4) {
             top: 40%;
             left: 77%;
-            animation: animate 6s linear infinite;
+            animation: bubbles 6s linear infinite;
         }
         div:nth-child(5) {
             top: 57%;
             left: 10%;
-            animation: animate 6s linear infinite;
+            animation: bubbles 6s linear infinite;
         }
         div:nth-child(6) {
             top: 56%;
             left: 85%;
-            animation: animate 11s linear infinite;
+            animation: bubbles 11s linear infinite;
         }
         div:nth-child(7) {
             top: 55%;
             left: 25%;
-            animation: animate 9s linear infinite;
+            animation: bubbles 9s linear infinite;
         }
         div:nth-child(8) {
             top: 32%;
             left: 90%;
-            animation: animate 5s linear infinite;
+            animation: bubbles 5s linear infinite;
         }
         div:nth-child(9) {
             display: none;
@@ -292,22 +289,8 @@ body {
         div:nth-child(11) {
             display: none;
         }
-        
-        @keyframes animate {
-            0% {
-                transform: scale(0) translateY(0) rotate(0);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1.3) translateY(-9rem);
-                opacity: 0;
-            }
-        }
     }
 
-
-    /*  */
-    
     &__heading-container {
         margin-bottom: 2.5rem;
     }
@@ -328,6 +311,17 @@ body {
     }
     &__text-container :first-child {
         font-weight: 600;
+    }
+}
+
+@keyframes bubbles {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translateY(-9rem);
+        opacity: 0;
     }
 }
 
@@ -352,7 +346,7 @@ body {
         padding-top: 3.5rem;
 
         article {
-            transition: all 380ms;
+            transition: all 550ms;
             width: 25rem;
             height: 18rem;
             padding-top: 0.7rem;
@@ -425,7 +419,7 @@ body {
         }
 
         .batata-bit:hover {
-            @include project-hover ("../projects/batata-bit/assets/img/bitcoin-woman-min.jpg", 550ms);
+            @include project-hover ("../projects/batata-bit/assets/img/bitcoin-woman-min.jpg");
             .batata-icon {
                 @include project-icon-hover (13%, 11.8%, -6.7rem, -6.5rem, 600ms);
             }
@@ -433,7 +427,7 @@ body {
 
         
         .platzi-video:hover {
-            @include project-hover ("../projects/platzi-video/assets/platzi-thumbnail.jpg", 550ms);
+            @include project-hover ("../projects/platzi-video/assets/platzi-thumbnail.jpg");
             .platzi-icon {
                 @include project-icon-hover (12%, 20%, -7.1rem, -6.5rem, 650ms);
             }
@@ -441,7 +435,7 @@ body {
 
 
         .generic-blog:hover {
-            @include project-hover ("../projects/blog/assets/img/blog-cover.jpg", 550ms);
+            @include project-hover ("../projects/blog/assets/img/blog-cover.jpg");
             .blog-icon {
                 @include project-icon-hover (13%, 20%, -7.7rem, -6.5rem, 700ms);
             }
@@ -449,7 +443,7 @@ body {
 
 
         .google-clone:hover {
-            @include project-hover ("../projects/google-clone/assets/google-thumbnail.jpg", 550ms);
+            @include project-hover ("../projects/google-clone/assets/google-thumbnail.jpg");
             .google-icon {
                 @include project-icon-hover (10%, 16.6%, -7.7rem, -6.5rem, 600ms);
             }
@@ -652,19 +646,19 @@ body {
                 display: block;
                 top: 63%;
                 left: 37%;
-                animation: animate 5.5s linear infinite;
+                animation: bubbles 5.5s linear infinite;
             }
             div:nth-child(10) {
                 display: block;
                 top: 37%;
                 left: 33%;
-                animation: animate 4.5s linear infinite;       
+                animation: bubbles 4.5s linear infinite;       
             }
             div:nth-child(11) {
                 display: block;
                 top: 61%;
                 left: 60%;
-                animation: animate 8s linear infinite;       
+                animation: bubbles 8s linear infinite;       
             }
         }
 
