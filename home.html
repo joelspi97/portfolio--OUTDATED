@@ -21,23 +21,23 @@
     <header class="header section">
         <nav class="header__nav">
             <label for="toggle">
-                <div class="menu-btn">
+                <div class="menu-btn" tabindex="0" aria-label="Open menu">
                     <div class="menu-btn__burger"></div>
                 </div>
             </label>
             <input type="checkbox" id="toggle" />
             <div class="menu">
-                <a href="#about-me">About me</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <a class="nav-link" href="#about-me">About me</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </div>
         </nav>
         <div class="header__image-container center-content">
-            <img src="./assets/self-portrait-mobile.jpg" alt="Joel's caricature self-portrait">
+            <img src="./assets/self-portrait-mobile.jpg" alt="">
         </div>
         <div class="header__text-container center-content">
-            <h1 class="section-heading">CSS & HTML, UI Design and Illustration</h1>
-            <p>My goal is to create products that look good both on screen and paper.</p>
+            <h1 class="section-heading">Front-end development</h1>
+            <p>My goal is to create websites that look as well as they work</p>
         </div>
     </header>
 
@@ -70,11 +70,11 @@
                 <img src="./assets/full-body-small.png" alt="Joel's caricature full-body drawing">
             </div>
             <div class="about-me__text-container center-content">
-                <p>I design and code web pages. I'm also an illustrator.</p>
-                <p>My stack is HTML5, CSS3, SASS, Javascript, and I'm also learning npm and React.</p>
-                <p>I love drawing and eating, so I spend most of my time and energy doing these activities.</p>
-                <p>I'm constantly working to get better in whatever I'm doing, always trying to find the most logical
-                    way of solving problems.</p>
+                <p>I'm a front-end developer.</p>
+                <p>My stack is ReactJS, HTML5, CSS3, SASS, Javascript (ES6+), git, Bootstrap and npm. I also have knowledge in web accessibility.
+                <br />
+                I'm currently learning how to use React Native.</p>
+                <p>I'm constantly working to get better in whatever I'm doing, always trying to find the most logical way of solving problems.</p>
             </div>
         </section>
         <section class="section projects" id="projects">
@@ -84,25 +84,24 @@
                 <article class="batata-bit">
                     <h2>Batata Bit</h2>
                     <span class="batata-icon"></span>
-                    <a class="project-button" href="./projects/batata-bit/index.html" target="_blank">View project <span
-                            class="arrow-icon"></span></a>
+                    <a class="project-button" href="./projects/batata-bit/index.html" target="_blank" aria-label="Go to the Batata Bit project webpage">View project <span class="arrow-icon"></span></a>
                 </article>
                 <article class="platzi-video">
                     <h2>PlatziVideo</h2>
                     <span class="platzi-icon"></span>
-                    <a class="project-button" href="./projects/platzi-video/index.html" target="_blank">View project
+                    <a class="project-button" href="./projects/platzi-video/index.html" target="_blank" aria-label="Go to the Platzi Video project webpage">View project
                         <span class="arrow-icon"></span></a>
                 </article>
                 <article class="generic-blog">
                     <h2>Generic Blog</h2>
                     <span class="blog-icon"></span>
-                    <a class="project-button" href="./projects/blog/index.html" target="_blank">View project <span
+                    <a class="project-button" href="./projects/blog/index.html" target="_blank" aria-label="Go to the Generic Blog project webpage">View project <span
                             class="arrow-icon"></span></a>
                 </article>
                 <article class="google-clone">
                     <h2>Google Clone</h2>
                     <span class="google-icon"></span>
-                    <a class="project-button" href="./projects/google-clone/index-eng.html" target="_blank">View project
+                    <a class="project-button" href="./projects/google-clone/index-eng.html" target="_blank" aria-label="Go to the Google Clone project webpage">View project
                         <span class="arrow-icon"></span></a>
                 </article>
             </div>
@@ -113,21 +112,24 @@
         <div class="section-decoration"></div>
         <h1 class="section-heading">Get in touch!</h1>
         <div class="contact__image-container center-content">
-            <img src="./assets/profile-picture.jpg" alt="Joel's profile picture" />
+            <img src="./assets/profile-picture.jpg" alt="" />
         </div>
         <div class="contact__links-container">
             <a href="https://www.linkedin.com/in/joel-spinelli-497a1418b/" title="LinkedIn profile" target="_blank"
-                rel="noreferrer">
+                rel="noreferrer" aria-label="Visit my LinkedIn profile">
                 <span class="linkedin-icon"></span>
+                LinkedIn
             </a>
-            <a href="https://github.com/joelspi97" title="Github profile" target="_blank" rel="noreferrer">
+            <a href="https://github.com/joelspi97" title="Github profile" target="_blank" rel="noreferrer" aria-label="Visit my GitHub profile">
                 <span class="github-icon"></span>
+                GitHub
             </a>
-            <a href="mailto:joelspi97@gmail.com" title="Send e-mail" rel="noreferrer">
+            <a href="mailto:joelspi97@gmail.com" title="Send me an email" rel="noreferrer">
                 <span class="mail-icon"></span>
+                Send me an email!
             </a>
         </div>
-        <p>Made by Joel Spinelli with ❤️️ and 🐷</p>
+        <p>Made by Joel Spinelli with <span aria-label="love">❤️️</span> and <span aria-label="porcine power">🐷</span></p>
 
         <script src="./main.js"></script>
         

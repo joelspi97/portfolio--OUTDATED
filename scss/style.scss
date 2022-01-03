@@ -1,5 +1,4 @@
 /* VARIABLES */
-
 $dark-blue: #171E2F;
 $portfolio-white: #F5F5F5;
 
@@ -14,7 +13,6 @@ $projects-font: 'Source Sans Pro', sans-serif;
 
 
 /* GLOBAL RULES */
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -30,10 +28,9 @@ body {
 }
 
 
-
 /* GENERIC CLASSES */
-
 .section {
+    scroll-margin-top: -7.5rem;
     position: relative;
     width: 100%;
     padding: 9rem 2rem;
@@ -43,13 +40,16 @@ body {
     justify-content: center;
     box-shadow: 0rem 1rem 0.5rem 0rem rgba(0, 0, 0, 0.25) inset;
 }
+
 .section-heading {
     font-size: 2.8rem;
     font-weight: 700;
 }
+
 .center-content {
     text-align: center;
 }
+
 .section-decoration {
     width: 17rem;
     height: 17rem;
@@ -59,6 +59,7 @@ body {
     background-color: $dark-blue;
     box-shadow: 0rem 1rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
 }
+
 @mixin icon ($width, $height, $url) {
     display: inline-block;
     width: $width;
@@ -68,28 +69,41 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .project-button {
-    display: none;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    left: -10000px;
+
+    padding: 0.6rem 0.8rem;
     background-color: $portfolio-white;
     color: $dark-blue;
     border: 0.1rem solid $dark-blue;
-    font-size: 1.4rem;
-    padding: 0.6rem 0.8rem;
+    font-size: 1.6rem;
     text-align: center;
     text-decoration: none;
     border-radius: 2.5rem;
+
+    &:focus {
+        outline: 0.2rem solid $dark-blue;
+    }
 }
+
 .arrow-icon {
     @include icon(2rem, 1.6rem, "../assets/general/icons/right-arrow.svg");
         margin-right: -0.3rem;
         margin-bottom: -0.3rem;
 }
+
 @mixin project-hover ($url) {
     background-image: url($url);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 @mixin project-icon-hover ($width, $height, $x, $y, $transition-duration) {
     width: $width;
     height: $height;
@@ -99,7 +113,6 @@ body {
 
 
 /* HEADER */
-
 .header {
     z-index: 3;
     padding-top: 4rem;
@@ -112,7 +125,8 @@ body {
         max-width: 120rem;
         margin-top: -1rem;
         margin-bottom: 1.5rem;
-        font-size: 1.8rem;
+        font-size: 1.85rem;
+        font-weight: 600;
         text-align: end;
 
         label {
@@ -123,7 +137,6 @@ body {
             margin-bottom: 1rem;
 
             /* HAMBURGER MENU */
-            
             .menu-btn {
                 position: relative;
                 display: flex;
@@ -141,6 +154,7 @@ body {
                     border-radius: 0.2rem;
                     transition: all 300ms ease-in-out;
                 }
+
                 .menu-btn__burger::before, .menu-btn__burger::after {
                     content: "";
                     position: absolute;
@@ -150,23 +164,26 @@ body {
                     border-radius: 0.5rem;
                     transition: all 300ms ease-in-out;
                 }
+
                 .menu-btn__burger::before {
                     transform: translate(-2rem, -0.65rem); 
                 }
+
                 .menu-btn__burger::after {
                     transform: translate(-2rem, 0.65rem);  
                 }
             }
 
             /* HAMBURGER ANIMATION */
-
             .menu-btn.open {
                 .menu-btn__burger {
                     background-color: transparent;
                 }
+
                 .menu-btn__burger::before {
                     transform: translateX(-2rem) rotate(45deg);
                 }
+
                 .menu-btn__burger::after {
                     transform: translateX(-2rem) rotate(-45deg);
                 }
@@ -176,10 +193,12 @@ body {
         #toggle {
             display: none;
         }
+
         #toggle:checked + .menu {
             visibility: visible;
             opacity: 1;
         }
+
         .menu {
             opacity: 0;
             visibility: hidden;
@@ -197,9 +216,11 @@ body {
                 border: 0.1rem solid $portfolio-white;
                 transition-duration: 300ms;
             }
-            a:hover {
+            a:hover,
+            a:focus {
                 background-color: $portfolio-white;
                 color: $dark-blue;
+                outline: none;
             }
         }
     }
@@ -221,9 +242,7 @@ body {
 }
 
 
-
 /* ABOUT ME */
-
 .about-me {
     z-index: 2;
     background-color: transparent;
@@ -302,7 +321,7 @@ body {
 
     &__text-container {
         p {
-            font-size: 1.6rem;
+            font-size: 1.85rem;
             margin-top: 2.5rem;
             max-width: 70rem;
         } 
@@ -324,9 +343,7 @@ body {
 }
 
 
-
 /* PROJECTS */
-
 .projects {
     z-index: 1;
     background-color: $dark-blue;
@@ -355,6 +372,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+
             h2 {
                 display: none;
                 font-size: 2.8rem;
@@ -362,30 +380,36 @@ body {
         }
         .batata-bit {
             background-color: $batatabit;
+
             h2 {
                 margin-right: -3rem;
                 user-select: none;
             }
+            
             .batata-icon {
                 @include icon(7rem, 4.2rem, "../assets/general/icons/batata.svg");
             }
         }
         .platzi-video {
             background-color: $platzi-video;
+
             h2 {
                 margin-right: -4.1rem;
                 user-select: none;
             }
+
             .platzi-icon {
                 @include icon(7rem, 7rem, "../assets/general/chico-logo-platzi-video-BW2.png");
             }
         }
         .generic-blog {
             background-color: $blog;
+
             h2 {
                 margin-right: -4.5rem;
                 user-select: none;
             }
+
             .blog-icon {
                 @include icon(7rem, 7rem, "../assets/general/blog-icon.png");
                 background-color: $portfolio-white;
@@ -395,28 +419,40 @@ body {
         .google-clone {
             background-color: $google-clone;
             color: #535358;
+
             h2 {
                 margin-right: -4.1rem;
                 user-select: none;
             }
+
             .google-icon {
                 @include icon(7rem, 7.2rem, "../assets/general/google-icon.svg");
             }
         }
 
         /* TRANSITIONS */
-
-        article:hover {
+        article:hover,
+        article:focus-within {
             opacity: 1;
             transform: scale(1.12);
             flex-direction: column;
             justify-content: space-between;
         }
-        article:hover h2, article:hover a {
+
+        article:hover h2, 
+        article:focus-within h2 {
             display: inline-block;
         }
 
-        .batata-bit:hover {
+        article:hover .project-button,
+        article:focus-within .project-button {
+            position: static;
+            height: auto;
+            width: auto;
+        }
+
+        .batata-bit:hover,
+        .batata-bit:focus-within {
             @include project-hover ("../projects/batata-bit/assets/img/bitcoin-woman-min.jpg");
             .batata-icon {
                 @include project-icon-hover (13%, 11.8%, -6.7rem, -6.5rem, 600ms);
@@ -424,7 +460,8 @@ body {
         }
 
         
-        .platzi-video:hover {
+        .platzi-video:hover, 
+        .platzi-video:focus-within {
             @include project-hover ("../projects/platzi-video/assets/platzi-thumbnail.jpg");
             .platzi-icon {
                 @include project-icon-hover (12%, 20%, -7.1rem, -6.5rem, 650ms);
@@ -432,7 +469,8 @@ body {
         }
 
 
-        .generic-blog:hover {
+        .generic-blog:hover, 
+        .generic-blog:focus-within {
             @include project-hover ("../projects/blog/assets/img/blog-cover.jpg");
             .blog-icon {
                 @include project-icon-hover (13%, 20%, -7.7rem, -6.5rem, 700ms);
@@ -440,7 +478,8 @@ body {
         }
 
 
-        .google-clone:hover {
+        .google-clone:hover, 
+        .google-clone:focus-within {
             @include project-hover ("../projects/google-clone/assets/google-thumbnail.jpg");
             .google-icon {
                 @include project-icon-hover (10%, 16.6%, -7.7rem, -6.5rem, 600ms);
@@ -450,9 +489,7 @@ body {
 }
 
 
-
 /* CONTACT */
-
 .contact {
     background-color: $portfolio-white;
     color: $dark-blue;
@@ -465,6 +502,7 @@ body {
     &__image-container {
         width: 100%;
         margin-bottom: 2.5rem;
+        
         img {
             border-radius: 25rem;
             width: 40%;
@@ -480,22 +518,40 @@ body {
         margin-bottom: 6rem;
         display: flex;
         justify-content: space-evenly;
+        
         a {
-            border-radius: 5rem;
-            height: 8rem;
+            align-items: center;
+            border-radius: 0.5rem;
+            color: $dark-blue;
+            display: flex;
+            width: 18rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            flex-direction: column;
+            padding: 1rem;
+            text-align: center;
             text-decoration: none;
-            transition: background-color 200ms;
+            transition: background-color 200ms ease-in-out;
+
+            span {
+                border-radius: 50%;
+                margin-bottom: 0.8rem
+            }
+
             .linkedin-icon {
                 @include icon(8rem, 8rem, "../assets/general/linkedin_icon-large.png");
             }
+
             .github-icon {
                 @include icon(8rem, 8rem, "../assets/general/github_icon-large.png");
             }
+
             .mail-icon {
                 @include icon(8rem, 8rem, "../assets/general/mail_icon-large.png");
             }
         }
-        a:hover {
+        a:hover span,
+        a:focus span {
             background-color: rgb(255, 254, 199);
         }
     }
@@ -507,13 +563,10 @@ body {
 }
 
 
-
 /* TABLET MEDIA QUERIES */
-
 @media only screen and (min-width: 600px) {
 
     /* HEADER - TABLET */
-
     .header {
         &__nav {
             display: flex;
@@ -545,7 +598,6 @@ body {
 
 
     /* ABOUT-ME - TABLET*/
-
     .about-me {
         &__animation {
             div:nth-child(7) {
@@ -571,11 +623,23 @@ body {
 
 
     /* PROJECTS - TABLET */
-
     .projects {
         &__grid-container {
             grid-template-columns: 1fr 1fr;
             grid-column-gap: 3.5rem;
+        }
+    }
+
+    /* CONTACT */
+    .contact {
+        &__links-container {
+            a {
+                font-size: 1.6rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
         }
     }
 }
@@ -583,11 +647,9 @@ body {
 
 
 /* DESKTOP MEDIA QUERIES */
-
 @media only screen and (min-width: 900px) {
 
     /* HEADER - DESKTOP */
-
     .header {
         &__nav {
             justify-content: flex-end;
@@ -602,7 +664,6 @@ body {
 
 
     /* ABOUT-ME - DESKTOP */
-
     .about-me {
         &__image-container {
             img {
@@ -613,18 +674,17 @@ body {
 
 
     /* PROJECTS - DESKTOP */
-
     .projects {
         &__grid-container {
             width: auto;
             grid-gap: 5rem;
+
             article {
                 width: 30rem;
                 height: 21rem;
             }
 
             /* TRANSITIONS */
-
             .batata-bit:hover {
                 .batata-icon {
                     transform: translate(-7rem, -7.8rem);
@@ -652,7 +712,6 @@ body {
 @media only screen and (min-width: 1100px) {
 
     /* ABOUT-ME - DESKTOP__LARGE */
-
     .about-me {
         &__animation {
             div:nth-child(9) {
@@ -684,7 +743,6 @@ body {
 
 
     /* PROJECTS - DESKTOP__LARGE */
-
     .projects {
         &__grid-container {
             grid-gap: 6rem;
